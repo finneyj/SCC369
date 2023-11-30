@@ -66,11 +66,12 @@ static void init_pins() {
     CS.setDigitalValue(1);
     RST.setDigitalValue(1);
     PWR.setDigitalValue(1);
+    PWR.setHighDrive(true);
     BUSY.getDigitalValue(); //Set pin as input
 }
 
 static void until_not_busy() {
-    // delay_ms(10);
+    delay_ms(100); //Not needed?
     while (BUSY.getDigitalValue())
         delay_ms(100);
 }
@@ -87,11 +88,11 @@ static void write_image(uint8_t *image_data, int len) {
     init_pins();
 
     //Panel Reset
-    // delay_ms(100);
+    delay_ms(200); //Not needed?
     RST.setDigitalValue(0);
-    delay_ms(10);
+    delay_ms(2);
     RST.setDigitalValue(1);
-    delay_ms(10);
+    delay_ms(200); //Can be as low as 10ms?
 
     init_spi();
 
