@@ -22,6 +22,5 @@ The driver can be configured to use any of the edge connector pins. The main.cpp
 | CLK            | P13                | SPI Clock        |
 | RST            | P8                 | RESET            |
 | DC             | P9                 | DATA/COMMAND     |
-| CS             | P3 (leave disconnected until fixed) | CHIP SELECT      |
+| CS             | P16                | CHIP SELECT      |
 | BUSY           | P2                 | BUSY             |
-
