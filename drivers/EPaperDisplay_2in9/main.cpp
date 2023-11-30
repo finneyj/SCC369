@@ -152,6 +152,7 @@ static void write_image(uint8_t *image_data, int len) {
     //Send each byte of the image
     for (int i = 0; i < len; i++) {
         spi_data(image_data[i]);
+        until_not_busy();
     }
 
     //Display update sequence setting: Start Display
