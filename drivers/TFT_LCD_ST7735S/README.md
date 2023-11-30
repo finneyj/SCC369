@@ -18,7 +18,7 @@ The driver can be configured to use any of the edge connector pins. The main.cpp
 | -------------- | ------------------ | ---------------- |
 | GND            | 0V                 | Power Supply 0V  |
 | Vcc            | 3V                 | Power Supply 3V  |
-| SCK            | P13                | SPI Clock        |
+| SCL            | P13                | SPI Clock        |
 | SDA            | P15                | SPI Main Output  |
 | RES            | P0                 | LCD RESET        |
 | DC             | P1                 | LCD DATA/COMMAND |
